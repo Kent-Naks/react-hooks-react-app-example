@@ -1,20 +1,22 @@
 import React from "react";
+import ExampleComponent from "./ExampleComponent";
+import TestComponent from "./TestComponent";
 
-// no need to modify anything in here. The final test is looking for the returned JSX from this component
-function TestComponent() {
+function App() {
   return (
-    <div className="video">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/5TbUxGZtwGI"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        title="time video"
-        allowFullScreen
-      ></iframe>
+    <div className="App">
+      <h1>Now</h1> {/* Updated the h1 content */}
+      <p className="App-intro">
+        In React apps, we write JSX - it looks like HTML, and uses a lot of HTML
+        syntax. JSX lets us include JavaScript functions right along with the HTML,
+        and also allows us to add in components, which are separate, self-contained
+        chunks of JSX.
+      </p>
+      <ExampleComponent /> {/* Only one ExampleComponent */}
+      <TestComponent /> {/* Added TestComponent */}
     </div>
   );
 }
 
-export default TestComponent;
+export default App;
+
